@@ -1,0 +1,333 @@
+/* *************** 全般的なスタイル ***************  */
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+body {
+  font-family: "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "游ゴシック Medium", "Yu Gothic Medium", "游ゴシック体", YuGothic, "メイリオ", Meiryo, Osaka, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
+  font-size: 17px;
+  line-height: 1.7em;
+  letter-spacing: 0.1em;
+  color: #333;
+  background-color: #fff;
+  max-width: 1300px;
+  margin: 0 auto;
+}
+
+/* ************************************************ */
+/* ***************   共通スタイル   ***************  */
+a {
+  text-decoration: none;
+  color: #333;
+}
+
+ul, li {
+  list-style: none;
+}
+
+.section {
+  padding: 100px 30px;
+}
+
+.section:nth-of-type(odd) {
+  background-color: #f7f7f7;
+}
+
+.section-title-area {
+  margin-bottom: 38px;
+  text-align: center;
+}
+
+.section-title {
+  font-size: 40px;
+  font-weight: normal;
+  line-height: 1;
+  margin-bottom: 15px;
+  letter-spacing: 0.1em;
+}
+
+.section-intro {
+  padding: 0 30px;
+}
+
+.sub {
+  width:60px;
+}
+
+.section-body {
+  max-width: 1300px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.card {
+  margin-bottom: 30px;
+}
+
+
+
+/* ナビゲーション */
+.gnav ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.gnav li a {
+  padding: 15px 20px;
+  letter-spacing: 0.5em;
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: 0.5s ease-in-out;
+  -webkit-transition: 0.5s ease-in-out;
+}
+
+.gnav li a:hover {
+  opacity: 0.7;
+  background-color: #007bbb;
+  color: #fff
+}
+
+/* ************************************************ */
+/* ***************     ヘッダー     ***************  */
+
+#headerWrapper {
+  padding-top: 30px;
+}
+
+.backphoto {
+  position: relative;
+  margin: 0;
+  padding:0;
+}
+
+.backphoto img{
+  width: 100%;
+  opacity: 0.2;
+  position: relative;
+  display: block;
+}
+
+
+.siteTtl {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  z-index: 2;
+}
+
+
+.logo-title {
+  display: block;
+  font-size: 60px;
+  line-height: 1;
+  letter-spacing: 0.2em;
+  text-align: center;
+  position: relative;
+  animation-name: logoTitle;
+  animation-duration: 3s;
+}
+
+@keyframes logoTitle {
+  0% {
+    opacity: 0;
+    top: -50px;
+  }
+
+  50% {
+    opacity: 0.3;
+  }
+
+  100% {
+    opacity: 1;
+    top: 0;
+  }
+}
+
+.logo-desc {
+  display: block;
+  font-size: 30px;
+  margin-top: 20px;
+  text-align: center;
+  letter-spacing: 0.2em;
+  position: relative;
+  animation-name: logoDesc;
+  animation-duration: 3s;
+}
+
+@keyframes logoDesc {
+  0% {
+    top: 0;
+  }
+
+  50% {
+    top: 20px;
+  }
+
+  100% {
+    top: 0;
+  }
+}
+
+/* ************************************************ */
+
+/* ***************       作品      ***************  */
+.card-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.card-image img {
+  width: 270px;
+  height: 230px;
+  border-radius: 25px;
+  box-shadow: 0 0 25px 0 #d9d9d9;
+}
+
+.card-caption {
+  text-align: center;
+}
+
+.card-caption-title {
+  font-weight: bold;
+  margin-top: 8px;
+}
+
+.hover-action {
+  display: block;
+  text-align: center;
+  width: 300px;
+  opacity: 1;
+  transition-property: transform, opacity;
+  transition-duration: .4s, .4s;
+}
+
+.hover-action:hover {
+  transform: scale(1.05);
+  opacity: .6;
+}
+
+/* ************************************************ */
+/* ***************     自己紹介    ***************  */
+#profile .section-desc {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-bottom: 20px;
+}
+
+#profile .section-image {
+  display: block;
+  text-align: center;
+  width: 25%;
+}
+
+#profile .section-image img {
+  border-radius: 50%;
+  width: 100%;
+  height: auto;
+  box-shadow: 0 0 25px 0 #d9d9d9;
+}
+
+/* ************************************************ */
+/* ***************      スキル     ***************  */
+#skill .card-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin: 0 auto;
+}
+
+#skill .card {
+  display: flex;
+  flex-basis: 47%;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  margin-bottom: 50px;
+}
+
+#skill .skill-desc-title {
+  margin-bottom: 10px;
+}
+
+/* ************************************************ */
+/* ***************    コンタクト   ***************  */
+#contact .contact-list ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin: 0 auto;
+  padding: 10px;
+  width: 319px;
+}
+
+#contact .contact-list li a {
+  display: inline-block;
+  color: #fff;
+  width: 90px;
+  border-radius: 5%;
+  text-align: center;
+  justify-content: center;
+  line-height: 1.5em;
+  transition: 0.5s;
+}
+
+#contact .contact-list li a:hover {
+  opacity: 0.7;
+  position: relative;
+  animation: fabMove 2s infinite;
+  animation-timing-function: linear;
+}
+
+@keyframes fabMove {
+  0%, 80%, 100% {
+    top: 0;
+  }
+
+  20%, 60% {
+    top: 10px;
+  }
+
+  70%, 90% {
+    top: -10px;
+  }
+}
+
+#contact .twitter {
+  background-color: #1DA1f2;
+}
+
+#contact .facebook {
+  background-color: #3B5998;
+}
+
+#contact .blog {
+  background-color: #2C6EBD;
+}
+
+#contact .fa-hatena:before {
+  content: "B!";
+  font-family: Verdana;
+  font-weight: bold;
+  text-align: center;
+}
+
+#contact .contact-list .contact-other {
+  text-align: center;
+}
+
+/* ************************************************ */
+/* ***************    フッター    ***************  */
+#footerWrapper p {
+  text-align: center;
+  padding-bottom: 50px;
+}
